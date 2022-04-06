@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "CareKit",
     defaultLocalization: "en",
-    platforms: [.iOS(.v13), .watchOS(.v6)],
+    platforms: [.iOS("15.0"), .watchOS(.v6)],
     products: [
         .library(
             name: "CareKit",
@@ -23,7 +23,8 @@ let package = Package(
             targets: ["CareKitFHIR"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/FHIRModels.git", from: "0.1.0")
+        .package(url: "https://github.com/apple/FHIRModels.git", from: "0.1.0"),
+//        .package(url: "https://github.com/https://github.com/ResearchKit/ResearchKit.git", from: "2.0.0")
     ],
     targets: [
         .target(
